@@ -1,0 +1,1 @@
+"ID"	"data"	"cod_mercado"	"cod_produto"	"valor"	"cod_unidade"	"qtd"

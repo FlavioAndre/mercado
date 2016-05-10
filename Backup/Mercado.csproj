@@ -1,0 +1,243 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D0E2B26-6E0E-46B7-9ADA-F69D1624B4E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mercado</RootNamespace>
+    <AssemblyName>Mercado</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classesIO\Compras\Compras.cs" />
+    <Compile Include="classesIO\Compras\ListaCompras.cs" />
+    <Compile Include="classesIO\Compras\PersisteCompras.cs" />
+    <Compile Include="classesIO\Grupos\Grupo.cs" />
+    <Compile Include="classesIO\Grupos\ListaGrupos.cs" />
+    <Compile Include="classesIO\ItensListaProdutos\ItensProdutosLista.cs" />
+    <Compile Include="classesIO\ItensListaProdutos\ListaItensProdutosLista.cs" />
+    <Compile Include="classesIO\ItensListaProdutos\PersisteIntesProdutosLista.cs" />
+    <Compile Include="classesIO\Mercados\ListaSuperMercado.cs" />
+    <Compile Include="classesIO\Mercados\SuperMercado.cs" />
+    <Compile Include="classesIO\Mercados\PersisteMercado.cs" />
+    <Compile Include="classesIO\ProdutosLista\ListaProdutosLista.cs" />
+    <Compile Include="classesIO\ProdutosLista\PersisteProdutosLista.cs" />
+    <Compile Include="classesIO\ProdutosLista\ProdutoLista.cs" />
+    <Compile Include="classesIO\Produtos\ListaProdutos.cs" />
+    <Compile Include="classesIO\Grupos\PersisteGrupo.cs" />
+    <Compile Include="classesIO\Produtos\PersisteProduto.cs" />
+    <Compile Include="classesIO\UnidadeMedidas\ListaUnidadeMedida.cs" />
+    <Compile Include="classesIO\UnidadeMedidas\PersisteUnidadeMedida.cs" />
+    <Compile Include="classesIO\UnidadeMedidas\UnidadeMedida.cs" />
+    <Compile Include="ExceptionUI\ExcecaoCampos.cs" />
+    <Compile Include="Telas\Cadastros\CadItensListaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadItensListaProdutos.Designer.cs">
+      <DependentUpon>CadItensListaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadListaProdutosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadListaProdutosUC.Designer.cs">
+      <DependentUpon>CadListaProdutosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadProdutosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadProdutosUC.Designer.cs">
+      <DependentUpon>CadProdutosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadMercadosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadMercadosUC.Designer.cs">
+      <DependentUpon>CadMercadosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadUnidadeMedidasUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadUnidadeMedidasUC.Designer.cs">
+      <DependentUpon>CadUnidadeMedidasUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Conexao.cs" />
+    <Compile Include="Controls\OutlookBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OutlookBar.Designer.cs">
+      <DependentUpon>OutlookBar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classesIO\Produtos\Produto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\OutlookBar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutlookBar.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OutlookBar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ResourceString.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceString.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadGruposUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CadGruposUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadItensListaProdutos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CadItensListaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadListaProdutosUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CadListaProdutosUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadProdutosUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CadProdutosUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadMercadosUC.resx">
+      <DependentUpon>CadMercadosUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\CadUnidadeMedidasUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CadUnidadeMedidasUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\Report1.rdlc" />
+    <EmbeddedResource Include="Telas\Menus\MenuCadastrosUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MenuCadastrosUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menus\MenuMovimentacaoUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MenuMovimentacaoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menus\MenuRelatoriosUC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MenuRelatoriosUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\ResourceString.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceString.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Telas\Cadastros\CadGruposUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\CadGruposUC.Designer.cs">
+      <DependentUpon>CadGruposUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuCadastrosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuCadastrosUC.Designer.cs">
+      <DependentUpon>MenuCadastrosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuMovimentacaoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuMovimentacaoUC.Designer.cs">
+      <DependentUpon>MenuMovimentacaoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuRelatoriosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Menus\MenuRelatoriosUC.Designer.cs">
+      <DependentUpon>MenuRelatoriosUC.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\Cadastros.png" />
+    <Content Include="Imagens\Movimentacao.png" />
+    <Content Include="Imagens\Relatorios.png" />
+    <None Include="Resources\adicionar1.jpg" />
+    <None Include="Resources\excluir.jpg" />
+    <None Include="Resources\adicionar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
+    <Folder Include="Relatorios\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
